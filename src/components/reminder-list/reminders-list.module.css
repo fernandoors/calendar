@@ -1,0 +1,32 @@
+.container {
+  margin-left: 10px;
+}
+
+.container h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.container h4 label {
+  font-weight: 700;
+}
+
+.container h4 span {
+  cursor: pointer;
+  padding: 3px;
+  font-size: .8rem;
+  border-radius: 5px;
+  background-color: #432a92;
+  color: #ffffff;
+}
+
+.container h4 span:hover {
+  background-color: #422a928e;
+}
+
+.primary {
+  background-color: #422a928e;
+  color: #ffffff;
+}
