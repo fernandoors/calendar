@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Calendar Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### This Project is a code sample with create-react-app that use Redux, @reduxjs/toolkit and some Vanilla JS and CSS Modules to preset a Calendar Board and Reminders Tasks/Editor.
 
-## Available Scripts
+##### The project structure is:
 
-In the project directory, you can run:
+```bash
+├── src
+│   ├── page
+│   ├── components
+│   ├── utils
+│   │   ├── date
+│   ├── store
+│   │   ├── calendar
+│   │   ├── reminder
+│   ├── index.js
+└── package.json
+```
 
-### `npm start`
+#
+## Quick start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone this project;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- In the project directory, you can install the dependencies:
 
-### `npm test`
+`yarn`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Running:
 
-### `npm run build`
+`yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#
+### Features & Requirements:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* You need to use one of the following state management libraries: Relay, Apollo, MobX or Redux
+* Ability to add a new “reminder” (max 30 chars) for a user entered day and time.
+* Display reminders on the calendar view in the correct time order.
+* Allow the user to select a color when creating a reminder and display it appropriately.
+* Properly handle overflow when multiple reminders appear on the same date.
+* Ability to edit reminders – including changing text, day and time & color.
+* Ability to delete reminders.
+* Expand the calendar to support more than the current month.
 
-### `npm run eject`
+#
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Preview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![calendar](./ref/calendar.png 'calendar')
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
