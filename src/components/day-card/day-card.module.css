@@ -1,0 +1,49 @@
+.container {
+  min-height: 80px;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  justify-self: center;
+  background-color: #f5f5dc42;
+  border: 1px solid #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #dce9f578 !important;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 5px;
+  margin-left: 5px;
+  text-align: initial;
+}
+
+.day .add {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.day .add:hover {
+  color: #00ff6e;
+}
+
+.list {
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.list div {
+  height: 35px;
+  text-overflow: ellipsis;
+}
+
+.list div p {
+  font-size: 0.7rem;
+  text-align: start;
+}
