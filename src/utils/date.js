@@ -1,6 +1,6 @@
-export const converDateToString = (date = new Date()) =>
-  new Date(date).toISOString().split('.000Z')[0];
-
+export const converDateToString = (date = new Date()) => {
+  return new Date(date).toISOString().split('.')[0];
+};
 export const daysOfWeekName = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
 export const monthNames = [
@@ -57,4 +57,22 @@ export const sortRemindersByDates = (reminders) => {
   return reminders.sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
   );
+};
+
+export const getFirstDayByMonthAndYear = (year, month) => {
+  return new Date(`${year}-${month}-01 00:00`).getUTCDay();
+};
+
+export const getLastDayByMonthAndYear = (year, month) => {
+  return new Date(year, month, 0).getDate();
+};
+
+export const createMonthPlusInitialWeeks = (
+  firstMonthDay = 0,
+  lastMonthDay = 20,
+) => {
+  return ''
+    .padStart(firstMonthDay + lastMonthDay)
+    .split('')
+    .map((_, day) => day + 1);
 };
