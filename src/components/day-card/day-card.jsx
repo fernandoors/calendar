@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { reminderActions } from '../../store/reminder/reminder.store';
-import { converDateToString, formatedDate } from '../../utils/date';
+import { converDateToLocalString, formatedDate } from '../../utils/date';
 
 import RemindersItem from '../reminder-item/reminder-item';
 
@@ -21,7 +21,7 @@ export default function DayCard({ day, date }) {
   function handleAddReminderWithDate() {
     const time = new Date().toTimeString().split(' ')[0];
     const dateAdded = `${date} ${time}`;
-    dispatch(reminderActions.add({ date: converDateToString(dateAdded) }));
+    dispatch(reminderActions.add({ date: converDateToLocalString(dateAdded) }));
   }
 
   const remindersFiltersByDay = useMemo(

@@ -1,9 +1,9 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { converDateToString, formatedDate } from '../../utils/date';
+import { converDateToLocalString, formatedDate } from '../../utils/date';
 
 export const createReminder = (reminderData) => ({
   id: nanoid(10),
-  date: converDateToString(),
+  date: converDateToLocalString(),
   title: '',
   color: '#5CE095',
   ...reminderData,

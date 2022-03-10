@@ -33,7 +33,7 @@ function RemindersList() {
   return (
     <div className={styles.container}>
       <h4>
-        Next Reminders:
+        Reminders:
         {!!filterByDay ? (
           <>
             <label>{filterByDay}</label>

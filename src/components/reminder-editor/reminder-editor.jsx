@@ -18,9 +18,9 @@ export default function ReminderEditor() {
   }
 
   function handleUpdateForm(e) {
-    const { name, value } = e.target;
+    const { id, value } = e.target;
     if (value.length <= 30) {
-      dispatch(reminderActions.updateReminder({ key: name, value }));
+      dispatch(reminderActions.updateReminder({ key: id, value }));
     }
   }
 
@@ -37,13 +37,13 @@ export default function ReminderEditor() {
             When:
             <span
               onClick={handleRemoveReminder}
-              className={styles.trash + ' fa fa-trash'}
+              className={styles.trash + " fa fa-trash"}
             />
           </label>
           <input
             type="datetime-local"
-            name="date"
-            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+            id="date"
+            pattern="[\d]{4}-[\d]{2}-[\d]{2}T[\d]{2}:[\d]{2}"
             value={reminderSelected.date}
             onChange={handleUpdateForm}
           />
@@ -54,7 +54,7 @@ export default function ReminderEditor() {
             <span
               className={styles.span}
               style={{
-                color: reminderSelected.title.length > 25 ? '#f00' : '#000',
+                color: reminderSelected.title.length > 25 ? "#f00" : "#000",
               }}
             >
               ({reminderSelected.title.length}/30)
@@ -62,7 +62,7 @@ export default function ReminderEditor() {
           </label>
           <input
             type="text"
-            name="title"
+            id="title"
             onChange={handleUpdateForm}
             value={reminderSelected.title}
           />
@@ -73,7 +73,7 @@ export default function ReminderEditor() {
           </label>
           <input
             type="color"
-            name="color"
+            id="color"
             onChange={handleUpdateForm}
             value={reminderSelected.color}
           />
